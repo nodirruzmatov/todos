@@ -68,6 +68,7 @@ const renderTodos = (arr, htmlElement) => {
     const newItem = document.createElement("li");
     const newCheckbox = document.createElement("input");
     const newDeleteBtn = document.createElement("button");
+    const newDiv = document.createElement("div");
 
     newDeleteBtn.classList.add("deletebtn");
     newCheckbox.classList.add("checkbtn");
@@ -89,8 +90,9 @@ const renderTodos = (arr, htmlElement) => {
     }
 
     elTodoList.appendChild(newItem);
-    newItem.appendChild(newCheckbox);
-    newItem.appendChild(newDeleteBtn);
+    newItem.appendChild(newDiv);
+    newDiv.appendChild(newCheckbox);
+    newDiv.appendChild(newDeleteBtn);
   });
 };
 
